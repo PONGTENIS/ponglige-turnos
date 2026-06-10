@@ -125,15 +125,7 @@ td{padding:10px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:mid
       <p style="font-size:14px;font-weight:600;color:var(--text-muted);margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px;font-family:'Exo 2',sans-serif;">¿En cuál mesa quieres jugar?</p>
       <div id="mesas-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:1.5rem"></div>
     </div>
-    <script>
-    (function(){
-      var mesas=['MESA 1','MESA 2','MESA 3','MESA 4','MESA 5'];
-      var grid=document.getElementById('mesas-grid');
-      if(grid){
-        grid.innerHTML=mesas.map(function(m){return'<div onclick="selectMesa(''+m+'')" style="border:1px solid #2d3748;border-radius:12px;padding:16px 8px;text-align:center;cursor:pointer;background:#161b22;transition:all .2s;font-family:Exo 2,sans-serif" onmouseover="this.style.borderColor='#00d4ff';this.style.background='rgba(0,212,255,.06)'" onmouseout="this.style.borderColor='#2d3748';this.style.background='#161b22'"><div style="font-size:28px;margin-bottom:6px">🏓</div><div style="font-size:12px;font-weight:700;color:#f0f6fc;letter-spacing:.5px">'+m+'</div></div>';}).join('');
-      }
-    })();
-    </script>
+
 
     <!-- CALENDAR VIEW -->
     <div id="calendar-view" style="display:none">
@@ -275,8 +267,8 @@ td{padding:10px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:mid
 </div>
 
 <script>
-const SUPABASE_URL= + SUPABASE_URL + 
-const SUPABASE_KEY= + SUPABASE_KEY + 
+const SUPABASE_URL='https://glwcnlxtzmdlxcxkqbbp.supabase.co'
+const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdsd2NubHh0em1kbHhjeGtxYmJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwODExNTIsImV4cCI6MjA5MzY1NzE1Mn0.0Q_3Vj1pMQRMbsdLPJfL561sqNEJgAcn4YIXhe_aDz8'
 const ADMIN_PWD='admin123'
 
 let CFG={emailjsService:localStorage.getItem('cfg_service')||'',emailjsTemplate:localStorage.getItem('cfg_template')||'',emailjsPubKey:localStorage.getItem('cfg_pubkey')||''}
